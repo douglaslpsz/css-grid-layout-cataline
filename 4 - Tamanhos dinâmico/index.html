@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+    <title>CSS Grid Layout - Tamanhos dinâmico</title>
+    <style>
+      body {
+        background: #3494e6;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .item {
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #000;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: minmax(400px, 900px);
+        grid-template-rows: repeat(2, 100px);
+
+        grid-gap: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
