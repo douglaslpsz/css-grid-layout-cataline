@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+    <title>CSS Grid Layout - "Colunas e linhas", "Espaçamentos" e "Fluxo automático"</title>
+    <style>
+      body {
+        background: #3494e6;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .item {
+        background: #fff;
+        border-radius: 5px;
+        border: 1px solid #000;
+        /*height: 50px;*/
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 200px 200px;
+        
+        /*Espaçamento*/
+        grid-row-gap: 1rem;
+        grid-column-gap: 1rem;
+        
+        /*
+          grid-row-gap e grid-column-gap podem ser abreviados em apenas um item,
+          "grid-gap", o primeiro valor se refere ao espaçamento entre as linhas,
+          o segundo valor representa o espaçamento entre as colunas.
+
+          Sendo assim o exemplo acima pode ser abreviado da seguinte forma:
+        */
+        
+        grid-gap: 1rem 1rem;
+
+        grid-auto-flow: column
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
