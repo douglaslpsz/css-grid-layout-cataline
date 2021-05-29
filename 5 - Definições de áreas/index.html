@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1"/>
+    <title>CSS Grid Layout - Definições de áreas</title>
+    <style>
+      body {
+        background: #3494e6;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .item {
+        background: #fff;
+        border-radius: 5px;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 150px;
+        grid-template-rows: auto 50vh auto;
+        grid-template-areas: 
+          'header header' 
+          'content nav'
+          'footer footer';        
+        grid-gap: 1rem;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .content {
+        grid-area: content;
+      }
+
+      .nav {
+        grid-area: nav;
+      }
+
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <header class="header item">
+        <h1>Cabeçalho</h1>
+      </header>
+
+      <main class="content item">
+        <h2>Conteúdo</h2>
+      </main>
+
+      <nav class="nav item">
+        <h2>Nav</h2>
+      </nav>
+
+      <footer class="footer item">
+        <h2>Rodapé</h2>
+      </footer>
+
+    </div>
+  </body>
+</html>
