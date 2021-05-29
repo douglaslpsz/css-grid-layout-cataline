@@ -1,0 +1,37 @@
+body {
+  font-family: sans-serif;
+  background: #3494e6;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  height: 100%;
+  display: grid;
+  grid-template-columns:  400px;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-content: center;
+}
+
+.login {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 2rem;
+  border: 2rem;
+  border-radius: 5px;
+  grid-template-columns: 1fr;
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  justify-items: center;
+
+}
+
+.login__text-field {
+  width: 100%;
+  border: 1px solid #eee;
+  padding: 0.3rem;
+  outline: none;
+  border-radius: 5px;
+
+}
