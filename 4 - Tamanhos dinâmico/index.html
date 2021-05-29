@@ -19,8 +19,9 @@
       }
       .container {
         display: grid;
-        grid-template-columns: minmax(400px, 900px);
-        grid-template-rows: repeat(2, 100px);
+        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 200px));
+        grid-auto-rows: 200px;
 
         grid-gap: 1rem;
       }
@@ -29,6 +30,12 @@
 
   <body>
     <div class="container">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
       <div class="item"></div>
       <div class="item"></div>
     </div>
